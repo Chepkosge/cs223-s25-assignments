@@ -1,5 +1,5 @@
 CC=gcc
-SOURCES=fractal
+SOURCES=thread_render render
 FILES := $(subst .c,,$(SOURCES))
 FLAGS=-g -Wall -Wvla -Werror -Wno-unused-variable -Wno-unused-but-set-variable
 
