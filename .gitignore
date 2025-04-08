@@ -1,3 +1,7 @@
+dot
+multiply
+glow
+glow_multithreaded
 marco_polo
 message_reader
 message_writer

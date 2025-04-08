@@ -1,5 +1,5 @@
 CC=gcc
-SOURCES=fractal
+SOURCES=glow.c glow_multithreaded
 FILES := $(subst .c,,$(SOURCES))
 FLAGS=-g -Wall -Wvla -Werror -Wno-unused-variable -Wno-unused-but-set-variable
 
@@ -7,7 +7,7 @@ FLAGS=-g -Wall -Wvla -Werror -Wno-unused-variable -Wno-unused-but-set-variable
 all: $(FILES)
 
 % :: %.c read_ppm.c write_ppm.c
-	$(CC) $(FLAGS) $< read_ppm.c write_ppm.c -o $@ -lpthread
+	$(CC) $(FLAGS) $< read_ppm.c write_ppm.c -o $@ -lpthread -lm
 
 clean:
 	rm -rf $(FILES)
